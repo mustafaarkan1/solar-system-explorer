@@ -1,141 +1,99 @@
+# 🌌 Solar System Explorer | مستكشف النظام الشمسي
 
-# Task Manager App - Application Structure and UI/UX Design
+An interactive 3D solar system explorer built with [Three.js](https://threejs.org/), designed to educate and inspire. The interface is fully in Arabic and offers a visually stunning experience of the planets and their orbits.
 
-This document outlines the structure, key pages, and user flow for the Task Manager application.
-
-## 1. Application Structure
-
-The application is a Single Page Application (SPA) built using **React** (or plain HTML/CSS/JS as an alternative). It communicates with a **Flask** backend API for data persistence and user authentication.
-
-## 2. Key Pages and Components
-
-### a. Authentication Pages
-
-#### Login Page (`/login`)
-- **Components:**
-  - Header/Logo
-  - Email Input Field
-  - Password Input Field
-  - Login Button
-  - Link to Signup Page
-  - Error Message Display
-- **Functionality:** Submits credentials to backend, handles login success (redirect to Dashboard) or failure (show error).
-
-#### Signup Page (`/register`)
-- **Components:**
-  - Header/Logo
-  - Username Input Field
-  - Email Input Field
-  - Password Input Field
-  - Confirm Password Input Field
-  - Signup Button
-  - Link to Login Page
-  - Error Message Display
-- **Functionality:** Submits registration details, handles success (redirect) or failure (error message).
-
-### b. Main Application Pages
-
-#### Task Dashboard (`/`)
-- **Components:**
-  - Header (App Name, User Info, Logout)
-  - Add Task Button
-  - Task List with:
-    - Filters (All, Personal, Work, etc.)
-    - Sorters (Priority, Due Date, etc.)
-    - Search Bar
-    - Task Items (Title, Priority, Due Date, Edit/Delete Buttons)
-- **Functionality:** Displays tasks, allows task interaction (edit, delete, complete), supports filters and search.
-
-#### Add/Edit Task Page (`/tasks/new`, `/tasks/edit/:id`)
-- **Components:**
-  - Title Input
-  - Description Area
-  - Priority Dropdown
-  - Due Date Picker
-  - Category Selector
-  - Save/Cancel Buttons
-- **Functionality:** Handles task creation/editing, validates inputs, and redirects to dashboard.
-
-## 3. User Flow
-
-1. **New User:** Login → Sign Up → Register → Redirect → Login → Dashboard.
-2. **Existing User:** Login → Dashboard.
-3. **Add Task:** Dashboard → Add Task → Submit → View Task in List.
-4. **Edit Task:** Dashboard → Edit → Submit → Task Updated.
-5. **Complete Task:** Dashboard → Mark Task as Complete.
-6. **Delete Task:** Dashboard → Delete Task → Confirm.
-7. **Sort/Filter:** Dashboard → Use Controls.
-8. **Logout:** Dashboard → Logout.
-
-## 4. UI/UX Considerations
-
-- **Responsiveness:** Adapts to desktop, tablet, and mobile.
-- **Clarity:** Clear visual hierarchy and navigation.
-- **Consistency:** Unified color, typography, and layout.
-- **Accessibility:** ARIA, keyboard nav, contrast.
-- **Simplicity:** Focus on core task functionality.
-- **Feedback:** Feedback on actions (loading, success, errors).
+تطبيق تفاعلي ثلاثي الأبعاد لاستكشاف كواكب النظام الشمسي باستخدام مكتبة [Three.js](https://threejs.org/) برسومات واقعية وواجهة عربية كاملة.
 
 ---
 
-# تقرير تطوير تطبيق إدارة المهام
+## 🚀 Features | الميزات
 
-## نظرة عامة
+- 🪐 Realistic 3D planets with rotation and orbits  
+- 💫 Smooth controls: zoom, rotate, and select planets  
+- 🌐 Responsive Arabic UI (RTL layout)  
+- 🔭 Simulation speed and camera controls  
+- ☄️ Planet details including diameter, temperature, and orbit speed
 
-تم تطوير تطبيق إدارة المهام باستخدام React للواجهة الأمامية وFlask للواجهة الخلفية، مع قاعدة بيانات MySQL.
+---
 
-## المراحل المكتملة
+## 🔧 How to Run | كيفية التشغيل
 
-- ✅ تحليل وتخطيط المشروع
-- ✅ تصميم الواجهة وهيكل الصفحات
-- ✅ إعداد بيئة التطوير (React + Flask)
-- ✅ تصميم قاعدة البيانات (SQLAlchemy)
-- ✅ تطوير واجهة المستخدم (تسجيل الدخول، المهام)
-- ✅ تنفيذ الواجهة الخلفية (API + JWT)
-- ✅ التكامل الكامل بين الواجهتين
-- ✅ الميزات الإضافية: إشعارات، بحث، فلاتر، الوضع الليلي
+### ✅ Option 1: View Online (GitHub Pages)
+[🌐 https://mustafaarkan1.github.io/solar-system-explorer/](https://mustafaarkan1.github.io/solar-system-explorer/)
 
-## هيكل المشروع
+### 💻 Option 2: Run Locally
+1. Download `solar_system_explorer.html`
+2. Open it with any modern browser (Chrome, Firefox, Edge)
 
-### Frontend
+---
 
-```
-frontend/task-manager-frontend/
-├── components/
-│   ├── auth/ (LoginForm.tsx, RegisterForm.tsx)
-│   ├── tasks/ (TaskForm.tsx, TaskItem.tsx)
-│   ├── notifications/
-│   └── ui/
-├── hooks/
-├── lib/
-├── App.tsx
-└── main.tsx
-```
+## 🎨 Screenshot | لقطة شاشة
 
-### Backend
+*(Add `screenshot.png` image to show here)*  
+![Solar System Explorer](screenshot.png)
 
-```
-backend/task-manager-backend/
-├── models/ (user.py, task.py, notification.py)
-├── routes/ (auth.py, tasks.py, notifications.py)
-└── main.py
-```
+---
 
-## الميزات المنفذة
+## 📁 Files | الملفات
 
-- ✅ المصادقة (تسجيل، JWT، تشفير)
-- ✅ إدارة المهام (CRUD، تصنيف، أولوية)
-- ✅ نظام إشعارات
-- ✅ فلترة وبحث
-- ✅ الوضع الليلي
+- `solar_system_explorer.html` — The full application in a single file
 
-## الخطوات التالية
+---
 
-1. اختبار شامل (وحدة، تكامل، قبول).
-2. تحسين الأداء (استعلامات، كاش، تحسين الواجهة).
-3. النشر (Netlify/Vercel وRender/Railway).
+## 📜 License | الرخصة
 
-## الخلاصة
+MIT License — Free for personal and educational use.
 
-تطبيق شامل ومرن لإدارة المهام بواجهة سهلة وميزات متقدمة.
-# solar-system-explorer
+---
+
+## 👤 Author | المؤلف
+
+- Mustafa Arkan – [GitHub Profile](https://github.com/mustafaarkan1)
+
+---
+
+## 🇸🇦 النسخة العربية
+
+### 🌌 مستكشف النظام الشمسي
+
+تطبيق ثلاثي الأبعاد تفاعلي يتيح لك استكشاف النظام الشمسي برسومات واقعية ومعلومات فلكية، مع واجهة عربية جميلة وسهلة الاستخدام.
+
+---
+
+### 🚀 المميزات
+
+- 🪐 كواكب ثلاثية الأبعاد تدور وتدور حول الشمس
+- 💫 تحكم بالماوس والكيبورد: دوران، تكبير، واختيار الكوكب
+- 🌐 واجهة كاملة باللغة العربية
+- ⚙️ تغيير سرعة المحاكاة والمسافة من الكاميرا
+- 🧠 معلومات فلكية مفصلة لكل كوكب
+
+---
+
+### 🔧 كيفية التشغيل
+
+#### ✅ الطريقة 1: عبر الإنترنت (GitHub Pages)
+[🌐 https://mustafaarkan1.github.io/solar-system-explorer/](https://mustafaarkan1.github.io/solar-system-explorer/)
+
+#### 💻 الطريقة 2: تشغيل محلي
+1. حمل الملف `solar_system_explorer.html`
+2. افتحه بأي متصفح حديث مثل Chrome أو Firefox
+
+---
+
+### 🖼️ لقطة شاشة
+
+*(قم بإضافة صورة باسم `screenshot.png` ليتم عرضها هنا)*  
+![Solar System Explorer](screenshot.png)
+
+---
+
+### 📜 الرخصة
+
+مرخص بموجب رخصة MIT — يمكنك استخدامه بحرية للأغراض التعليمية والشخصية.
+
+---
+
+### 👨‍💻 المؤلف
+
+- مصطفى أركان – [ملف GitHub](https://github.com/mustafaarkan1)
